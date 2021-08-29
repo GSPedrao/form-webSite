@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
@@ -13,7 +13,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
-
+    <style>
+        body {
+            background-color: rgb(245, 245, 245);
+        }
+    </style>
 </head>
 
 <body>
@@ -23,10 +27,10 @@
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start" id="menu">
                 <img src="img/the room.png" width="100" height="100" class="">
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <a href="home.html">
+                    <a href="home.html" class="text-decoration-none">
                         <li class="nav px-3">Home</li>
                     </a>
-                    <li class="nav px-3">Sobre</li>
+                    <a href="#sobre"><li class="nav px-3">Sobre</li></a>
                 </ul>
 
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
@@ -35,21 +39,96 @@
                 </form>
 
                 <div class="text-end">
-                    <button class="btn btn-outline-light me-2">Logar</button>
+                    <a href="login.html"><button class="btn btn-outline-light me-2">Logar</button></a>
                     <button class="btn btn-outline-danger">Cadastrar</button>
                 </div>
             </div>
         </div>
     </header>
 
-    <section>
-        <h1 class="text-center fw-bolder">Castre-se</h1>
-        <div class="input-group ">
-            <input type="number" placeholder="CEP" class="form-control">
-            
-            <input type="text" placeholder="" class="form-control mx-4" width="100px">
-          
-        </div>
+    <main class="container">
+
+        <!--Cadastro-->
+        <section class="container">
+            <h1 class="text-center fw-bolder">Castre-se</h1>
+
+            <form method="post" onsubmit="return ( verifica() )" name="fmrEnvia">
+                <!--Nome-->
+                <div class="input-group ">
+                    <input type="text" placeholder="Nome" class="form-control">
+
+                    <input type="text" placeholder="Sobrenome" class="form-control mx-4" width="100px">
+
+                </div>
+                <br>
+                <!--Email-->
+                <div class="input-group ">
+                    <input type="email" name="email" id="email" placeholder="nome@exemplo.com" class="form-control"
+                        onblur="checarEmail();">
+                </div>
+                <br>
+                <!--Senha-->
+                <div class="input-group">
+                    <input type="password" class="form-control" placeholder="Senha">
+
+                </div>
+                <br>
+                <div class="input-group">
+                    <input type="password" class="form-control" placeholder="Confirmar Senha">
+
+                </div>
+                <br>
+                <!--CPF-->
+                <div class="input-group">
+                    <input type="number" placeholder="CPF" class="form-control">
+
+                </div>
+                <br>
+                <!--Nascimento-->
+                <div class="input-group">
+                    <input type="date" placeholder="Data de Nascimento" class="form-control">
+
+                </div>
+                <br>
+                <!--Número-->
+                <div class="input-group">
+                    <input type="number" class="form-control" placeholder="Número">
+
+                </div>
+            </form>
+            <br>
+
+            <a href="endereço.html"><button class="btn btn-outline-success container">Continuar</button></a>
+        </section>
+
+    </main>
+
+    <footer class="container text-center mt-5">
+        <p class="fs-5">&copy Gabriel Souza Pedrão</p>
+        <p id="sobre">Cadastre-se e venha conhecer <strong>THE ROOM</strong>, nós alugamos Salões vazios, como: </p>
+        <p>Salões normais - Salões de festas - Quadras vazias - Ruas vazias - Saguão vazio - Pista de dança vazia - ringue vazio.</p>
+    </footer>
+
+    <script type="text/javascript">
+        function verifica() {
+            if (document.forms[2].email.value.length == 0) {
+                alert('Por favor, informe o seu EMAIL.');
+                document.frmEnvia.email.focus();
+                return false;
+            }
+            return true;
+        }
+
+        function checarEmail() {
+            if (document.forms[2].email.value == "" ||
+                document.forms[2].email.value.indexOf('@') == -1 ||
+                document.forms[2].email.value.indexOf('.') == -1) {
+                alert("Por favor, informe um E-MAIL válido!");
+                return false;
+            }
+        }
+    </script>
+        
 </body>
 
 </html>
