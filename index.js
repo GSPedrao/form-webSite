@@ -28,10 +28,9 @@ function checarEmail() {
         if (!nome || !sobren || !senha || !csenha || !cpf || !ddn || !tel) {
             alert('porfavor preencha os campos obrigatórios');
         } else {
-            window.onload = function(){
-              window.location.href =  document.getElementById('link').click();
+           window.location.href = "cadastro.html";
             }
+
         }
     
-    }
  
