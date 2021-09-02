@@ -17,6 +17,12 @@
         body {
             background-color: rgb(245, 245, 245);
         }
+        #sobres{
+            color: white;
+        }
+        #sobres:hover{
+            color: red  ;
+        }
     </style>
 </head>
 
@@ -27,10 +33,10 @@
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start" id="menu">
                 <img src="img/the room.png" width="100" height="100" class="">
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <a href="home.html" class="text-decoration-none">
+                    <a href="home.html" class="text-decoration-none" id="sobres">
                         <li class="nav px-3">Home</li>
                     </a>
-                    <a href="#sobre"><li class="nav px-3">Sobre</li></a>
+                    <a href="#sobre" class="text-decoration-none" id="sobres"><li class="nav px-3">Sobre</li></a>
                 </ul>
 
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
@@ -50,14 +56,14 @@
 
         <!--Cadastro-->
         <section class="container">
-            <h1 class="text-center fw-bolder">Castre-se</h1>
+            <h1 class="text-center fw-bolder">Cadastre-se</h1>
 
             <form method="post" onsubmit="return ( verifica() )" name="fmrEnvia">
                 <!--Nome-->
                 <div class="input-group ">
-                    <input type="text" placeholder="Nome" class="form-control">
+                    <input type="text" placeholder="Nome" class="form-control" id="nome">
 
-                    <input type="text" placeholder="Sobrenome" class="form-control mx-4" width="100px">
+                    <input type="text" placeholder="Sobrenome" class="form-control mx-4" width="100px" id="sobren">
 
                 </div>
                 <br>
@@ -69,36 +75,36 @@
                 <br>
                 <!--Senha-->
                 <div class="input-group">
-                    <input type="password" class="form-control" placeholder="Senha">
+                    <input type="password" class="form-control" placeholder="Senha" id="senha">
 
                 </div>
                 <br>
                 <div class="input-group">
-                    <input type="password" class="form-control" placeholder="Confirmar Senha">
+                    <input type="password" class="form-control" placeholder="Confirmar Senha" id="csenha">
 
                 </div>
                 <br>
                 <!--CPF-->
                 <div class="input-group">
-                    <input type="number" placeholder="CPF" class="form-control">
+                    <input type="number" placeholder="CPF" class="form-control" id="cpf">
 
                 </div>
                 <br>
                 <!--Nascimento-->
                 <div class="input-group">
-                    <input type="date" placeholder="Data de Nascimento" class="form-control">
+                    <input type="date" placeholder="Data de Nascimento" class="form-control" id="ddn">
 
                 </div>
                 <br>
                 <!--Número-->
                 <div class="input-group">
-                    <input type="number" class="form-control" placeholder="Número">
+                    <input type="number" class="form-control" placeholder="Número" id="tel">
 
                 </div>
             </form>
             <br>
 
-            <a href="endereço.html"><button class="btn btn-outline-success container">Continuar</button></a>
+            <a href="endereço.html" id="link"><button class="btn btn-outline-success container" onclick="Confirmacao()">Continuar</button></a>
         </section>
 
     </main>
@@ -109,24 +115,7 @@
         <p>Salões normais - Salões de festas - Quadras vazias - Ruas vazias - Saguão vazio - Pista de dança vazia - ringue vazio.</p>
     </footer>
 
-    <script type="text/javascript">
-        function verifica() {
-            if (document.forms[2].email.value.length == 0) {
-                alert('Por favor, informe o seu EMAIL.');
-                document.frmEnvia.email.focus();
-                return false;
-            }
-            return true;
-        }
-
-        function checarEmail() {
-            if (document.forms[2].email.value == "" ||
-                document.forms[2].email.value.indexOf('@') == -1 ||
-                document.forms[2].email.value.indexOf('.') == -1) {
-                alert("Por favor, informe um E-MAIL válido!");
-                return false;
-            }
-        }
+    <script src="index.js">
     </script>
         
 </body>

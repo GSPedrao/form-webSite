@@ -14,7 +14,15 @@
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
   </script>
   <style>
-
+      #sobres{
+        color: white;
+      }
+      #sobres:hover{
+            color: red;
+        }
+        #batata:hover{
+          transform: translate(black);
+        }
   </style>
 </head>
 
@@ -25,8 +33,8 @@
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start" id="menu">
         <img src="img/the room.png" width="100" height="100" class="">
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li class="nav px-3">Home</li>
-          <a href="#sobre" class="text-decoration-none">
+          <li class="nav px-3" id="batata">Home</li>
+          <a href="#sobre" class="text-decoration-none" id="sobres">
             <li class="nav px-3">Sobre</li>
           </a>
         </ul>

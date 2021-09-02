@@ -46,19 +46,22 @@
                 </label>
             </div>
             <br>
-            <button onclick="Login()" class="w-100 btn btn-lg btn-success" id="botao">Entrar</button>
+            <a href="home.html" id="link"><button onclick="Login()" class="w-100 btn btn-lg btn-success" id="botao">Entrar</button></a>
         </form>
 
     </main>
     <script type="text/javascript">
         function Login() {
-            var emailUser = document.getElementById('emailUser').Value
-            var senhaUser = document.getElementById('senhaUser').Value
+            var emailUser = document.getElementById('emailUser').Value;
+            var senhaUser = document.getElementById('senhaUser').Value;
 
             if (!emailUser || !senhaUser) {
-                alert('preencha os campos para continuar')
+                alert('preencha os campos para continuar');
             } else {
-                window.location.href = "home.html"
+                window.onload = function (){
+                    document.getElementById('link').click();
+                    
+                }
             }
         }
 

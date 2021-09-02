@@ -13,6 +13,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
+    <style>  
+        #sobres{
+            color: white;
+        }
+        #sobres:hover{
+            color: red  ;
+        }
+    </style>
 
 </head>
 
@@ -23,10 +31,10 @@
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start" id="menu">
                 <img src="img/the room.png" width="100" height="100" class="">
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <a href="home.html" class="text-decoration-none">
-                        <li class="nav px-3">Home</li>
+                    <a href="home.html" class="text-decoration-none" id="sobres">
+                        <li class="nav px-3" id="">Home</li>
                     </a>
-                    <a href="#sobre"><li class="nav px-3">Sobre</li></a>
+                    <a href="#sobre" class="text-decoration-none" id="sobres"><li class="nav px-3">Sobre</li></a>
                 </ul>
 
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
@@ -44,26 +52,26 @@
     </header>
 
     <section class="container">
-        <h1 class="text-center fw-bolder">Castre-se</h1>
+        <h1 class="text-center fw-bolder">Coloque seu CEP</h1>
         <div class="input-group ">
-            <input type="number" placeholder="CEP" class="form-control">
+            <input type="number" placeholder="CEP" class="form-control" id="cep">
 
-            <input type="text" placeholder="Rua" class="form-control mx-4" width="100px">
+            <input type="text" placeholder="Rua" class="form-control mx-4" width="100px" id="endereco">
         </div>
         <br>
         <div class="input-group ">
-            <input type="number" placeholder="Bairro" class="form-control">
+            <input type="text" placeholder="Bairro" class="form-control" id="bairro">
 
-            <input type="text" placeholder="Cidade" class="form-control mx-4" width="100px">
+            <input type="text" placeholder="Cidade" class="form-control mx-4" width="100px" id="cidade">
         </div>
         <br>
         <div class="input-group ">
-            <input type="number" placeholder="Número" class="form-control">
+            <input type="text" placeholder="Estado" class="form-control" id="estado">
 
             <input type="text" placeholder="Complemento" class="form-control mx-4" width="100px">
         </div>
         <br>
-        <button class="btn btn-outline-success container">Cadastrar</button>
+        <button class="btn btn-outline-success container" onclick="BUTAO()">Cadastrar</button>
     </section>
     <footer class="container text-center mt-5">
         <p class="fs-5">&copy Gabriel Souza Pedrão</p>
@@ -71,6 +79,8 @@
         <p>Salões normais - Salões de festas - Quadras vazias - Ruas vazias - Saguão vazio - Pista de dança vazia - ringue vazio.</p>
     </footer>
 
+
+     <script src="CEP.js"></script>
 </body>
 
 </html>
