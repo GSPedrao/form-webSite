@@ -17,13 +17,13 @@ $estado     = $_POST["estado"];
 $comp       = $_POST["comp"];
 
 
-$cad_usuario = "INSERT INTO usuarios (nome, sobren, email, senha, cpf, ddn, numero, cep, rua, bairro, cidade, estado, comp) 
+$cad_usuario = "INSERT INTO usuarios (nome, sobrenome, email, senha, CPF, nascimento, numero, CEP, rua, bairro, cidade, esstado, complemento) 
 VALUES ('$nome', '$sobren' , '$email', '$senha','$cpf', '$ddn', '$numero', '$cep', '$rua', '$bairro', '$cidade', '$estado', '$comp')";
 
 
 if (mysqli_query($conn, $cad_usuario)) {
     echo "<h1>Novo cadastro realizado </h1></br>";
-} else {
+} else {    
     echo "Erro: " . $cad_usuario . "</br>" . mysqli_error($conn);
 }
 mysqli_close($conn);
