@@ -16,7 +16,7 @@ function checarEmail() {
     }
 }
 
- function Confirmacao(){
+ function Confirmacao(){    
         var nome = document.getElementById('nome').value
         var sobren = document.getElementById('sobren').value
         var senha = document.getElementById('senha').value
@@ -24,11 +24,17 @@ function checarEmail() {
         var cpf = document.getElementById('cpf').value
         var ddn = document.getElementById('ddn').value
         var tel = document.getElementById('tel').value
+        var cep = document.getElementById('cep').value
+        var endereco = document.getElementById('endereco').value
+        var bairro = document.getElementById('bairro').value
+        var cidade = document.getElementById('cidade').value
+        var estado = document.getElementById('estado').value
     
-        if (!nome || !sobren || !senha || !csenha || !cpf || !ddn || !tel) {
+    
+        if (!nome || !sobren || !senha || !csenha || !cpf || !ddn || !tel || !cep || !endereco || ! bairro || !cidade || !estado) {
             alert('porfavor preencha os campos obrigatórios');
         } else {
-           window.location.href = "cadastro.html";
+                alert('parabéns amigão');
             }
 
         }
