@@ -124,10 +124,13 @@
                     <input type="text" placeholder="Complemento" class="form-control mx-4" width="100px" name="comp">
                 </div>
                 <br>
-            </form>
+          
             <br>
-                 
-            <button class="btn btn-outline-success container" name="cadastrar" onclick="Confirmacao()">Continuar</button>
+                 <div id="botao">
+            <input type="submit" class="btn_enviar btn btn-success container" name="cadastrar" onclick="Confirmacao()" value="cadastrar">
+            </div>
+            </form>
+            
         </section>
 
     </main>

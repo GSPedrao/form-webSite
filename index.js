@@ -31,7 +31,7 @@ function checarEmail() {
         var estado = document.getElementById('estado').value
     
     
-        if (!nome || !sobren || !senha || !csenha || !cpf || !ddn || !tel || !cep || !endereco || ! bairro || !cidade || !estado) {
+        if (!nome || !sobren || !senha || !csenha || !cpf || !ddn || !tel || !cep || !endereco || !bairro || !cidade || !estado) {
             alert('porfavor preencha os campos obrigatórios');
         } else {
                 alert('parabéns amigão');

@@ -4,7 +4,7 @@ $servidor = "localhost";
 $usuario = "root";
 $senha = "";
 $dbname = "formdatab";
-
+ 
     
 //Criando a conexão 
 
